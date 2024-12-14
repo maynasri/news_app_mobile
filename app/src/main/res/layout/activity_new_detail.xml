@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- AppBarLayout amélioré avec des marges et une couleur de fond attrayante -->
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
@@ -20,7 +19,6 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!-- Contenu principal avec NestedScrollView pour un meilleur comportement scrollable -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -32,7 +30,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Image avec CardView et coins arrondis -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -48,14 +45,12 @@
                     android:contentDescription="Image description" />
             </androidx.cardview.widget.CardView>
 
-            <!-- Contenu textuel avec des paddings améliorés -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="16dp">
 
-                <!-- Titre avec un style moderne -->
                 <TextView
                     android:id="@+id/detailTitle"
                     android:layout_width="match_parent"
@@ -79,7 +74,6 @@
                     android:fontFamily="sans-serif"
                     android:layout_marginBottom="16dp" />
 
-                <!-- Date de publication -->
                 <TextView
                     android:id="@+id/detailPublishedAt"
                     android:layout_width="match_parent"
@@ -90,7 +84,6 @@
                     android:layout_marginBottom="16dp"
                     android:text="Published At: 2024-12-12" />
 
-                <!-- More details cliquable -->
                 <TextView
                     android:id="@+id/moreDetails"
                     android:layout_width="match_parent"
@@ -103,7 +96,6 @@
                     android:clickable="true"
                     android:focusable="true" />
 
-                <!-- ProgressBar centré, amélioré avec une animation -->
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

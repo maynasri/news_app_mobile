@@ -1,29 +1,28 @@
 package com.example.news_app_api;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.news_app_api.API.ApiClient;
 import com.example.news_app_api.API.ApiInterface;
 import com.example.news_app_api.Adapters.NewsAdapter;
 import com.example.news_app_api.Models.Article;
 import com.example.news_app_api.Models.NewsApiResponse;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
+
+
+
 
 public class NewsFragment extends Fragment {
 
@@ -65,8 +64,6 @@ public class NewsFragment extends Fragment {
                 progressBar.setVisibility(View.GONE);
                 if (response.isSuccessful()) {
                     articles = response.body().getArticles();
-
-
                     adapter.notifyDataSetChanged();
                 } else {
                     showError();
@@ -82,6 +79,6 @@ public class NewsFragment extends Fragment {
     }
 
     private void showError() {
-        Toast.makeText(getContext(), "Erreur de connexion", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "Connection error", Toast.LENGTH_SHORT).show();
     }
 }

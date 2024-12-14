@@ -8,11 +8,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
 import com.bumptech.glide.Glide;
+
+
 
 public class NewDetailActivity extends AppCompatActivity {
 

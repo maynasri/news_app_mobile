@@ -19,7 +19,7 @@ public class ApiClient {
                         @Override
                         public Response intercept(Chain chain) throws IOException {
                             Request request = chain.request().newBuilder()
-                                    .addHeader("User-Agent", "AndroidApp")
+                                    .addHeader("User-Agent", "androidApplication")
                                     .build();
                             return chain.proceed(request);
                         }
