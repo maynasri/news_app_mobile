@@ -1,6 +1,10 @@
 package com.example.news_app_api;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
@@ -23,11 +27,12 @@ public class MainActivity extends AppCompatActivity {
 
         setupViewPager();
         tabLayout.setupWithViewPager(viewPager);
+
     }
 
     private void setupViewPager() {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new NewsFragment("general", API_KEY), "Home");
+        adapter.addFragment(new NewsFragment("general", API_KEY), "All");
         adapter.addFragment(new NewsFragment("sports", API_KEY), "Sports");
         adapter.addFragment(new NewsFragment("health", API_KEY), "Health");
         adapter.addFragment(new NewsFragment("science", API_KEY), "Science");
@@ -35,4 +40,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new NewsFragment("technology", API_KEY), "Technology");
         viewPager.setAdapter(adapter);
     }
+
+
+
 }

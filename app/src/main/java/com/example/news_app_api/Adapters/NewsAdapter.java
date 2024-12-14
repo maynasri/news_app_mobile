@@ -1,7 +1,7 @@
 package com.example.news_app_api.Adapters;
 
-
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.news_app_api.Models.Article;
+import com.example.news_app_api.NewDetailActivity;
 import com.example.news_app_api.R;
-
 import java.util.List;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder> {
@@ -47,6 +47,12 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
             if (onItemClickListener != null) {
                 onItemClickListener.onItemClick(article);
             }
+            Intent intent = new Intent(context, NewDetailActivity.class);
+            intent.putExtra("title", article.getTitle());
+            intent.putExtra("description", article.getDescription());
+            intent.putExtra("img", article.getUrlToImage());
+            intent.putExtra("url", article.getUrl());
+            context.startActivity(intent);
         });
     }
 

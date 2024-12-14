@@ -19,10 +19,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="News Feed"
+                android:text="News"
                 android:textStyle="bold"
                 android:textSize="20sp"
-                android:textColor="#03A9F4"/>
+                android:textColor="#6B8F20"/>
         </RelativeLayout>
     </Toolbar>
 
@@ -31,9 +31,9 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_below="@id/toolbar"
-        app:tabTextColor="#618C8F"
-        app:tabSelectedTextColor="#03A9F4"
-        app:tabIndicatorColor="#03A9F4"
+        app:tabTextColor="#525D39"
+        app:tabSelectedTextColor="#6B8F20"
+        app:tabIndicatorColor="#779F51"
         app:tabIndicatorHeight="3.5dp"
         android:backgroundTint="@color/white"
         app:tabMode="scrollable"/>

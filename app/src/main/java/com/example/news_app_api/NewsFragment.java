@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
@@ -64,14 +63,12 @@ public class NewsFragment extends Fragment {
             @Override
             public void onResponse(Call<NewsApiResponse> call, Response<NewsApiResponse> response) {
                 progressBar.setVisibility(View.GONE);
-                Log.d("mmmm",response.toString());
                 if (response.isSuccessful()) {
                     articles = response.body().getArticles();
-                    Log.d("---------",articles.toString());
+
 
                     adapter.notifyDataSetChanged();
                 } else {
-                    // Afficher un message d'erreur si la réponse échoue
                     showError();
                 }
             }
