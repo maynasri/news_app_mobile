@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">News_App_API</string>
+    <string name="image_description">Description_de_image_pour_les_utilisateurs_malvoyants</string>
+
+</resources>
